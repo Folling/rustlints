@@ -1,22 +1,22 @@
 #!/bin/bash
 
-args = ""
+args=""
 
 while read -r line; do
-    args += "-D {line}"
-done < $clippy_denies
+    args+="-D ${line}"
+done < clippy_denies.txt
 
 while read -r line; do
-    args += "-D {line}"
-done < $std_denies
+    args+="-D ${line}"
+done < std_denies.txt
 
 while read -r line; do
-    args += "-W {line}"
-done < $clippy_warns
+    args+="-W ${line}"
+done < clippy_warns.txt
 
 while read -r line; do
-    args += "-W {line}"
-done < $std_warns
+    args+="-W ${line}"
+done < std_warns.txt
 
-cargo clippy args
+cargo clippy -- $args
 cargo run
