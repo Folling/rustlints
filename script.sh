@@ -18,5 +18,4 @@ while read -r line; do
     args+="-W ${line}"
 done < std_warns.txt
 
-cargo clippy -- $args
-cargo run
+echo $args
