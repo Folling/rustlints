@@ -2,5 +2,7 @@
 
 cd ..
 
-bash ./check.sh
+echo "${@}"
+
+./check.sh "${@}"
 cargo run "${@:2}"

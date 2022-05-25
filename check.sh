@@ -22,7 +22,7 @@ clippy_args=()
 std_args=()
 
 while read -r line; do
-    if [[ -z "$line" || "$line" == "#*" ]]; then
+    if [[ -z "$line" || "$line" == "#"* ]]; then
         continue
     fi
 
@@ -30,7 +30,7 @@ while read -r line; do
 done <"./$mode/clippy"
 
 while read -r line; do
-    if [[ -z "$line" || "$line" == "#*" ]]; then
+    if [[ -z "$line" || "$line" == "#"* ]]; then
         continue
     fi
 

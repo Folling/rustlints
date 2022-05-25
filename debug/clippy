@@ -69,7 +69,7 @@
 -D clippy::excessive_precision
 -D clippy::exit
 -D clippy::expect_fun_call
--D clippy::expect_used
+# bugged -D clippy::expect_used
 -D clippy::expl_impl_clone_on_copy
 -D clippy::explicit_counter_loop
 -D clippy::explicit_deref_methods
@@ -259,7 +259,7 @@
 -D clippy::panicking_unwrap
 -D clippy::partialeq_ne_impl
 -D clippy::path_buf_push_overwrite
--D clippy::pattern_type_mismatch
+# -D clippy::pattern_type_mismatch
 -D clippy::precedence
 -D clippy::print_in_format_impl
 -D clippy::print_literal
